@@ -1,5 +1,14 @@
 module.exports = {
   plugins: [
+    // stage 1
+    require('babel-plugin-transform-class-properties'),
+    require('babel-plugin-transform-decorators'),
+    require('babel-plugin-transform-export-extensions'),
+    // stage 2
+    require('babel-plugin-syntax-trailing-function-commas'),
+    require('babel-plugin-transform-object-rest-spread'),
+    // stage 3
+    require('babel-plugin-transform-exponentiation-operator'),
     // extra
     require('babel-plugin-add-module-exports'),
     // es2015
@@ -23,14 +32,5 @@ module.exports = {
     require('babel-plugin-transform-es2015-typeof-symbol'),
     require('babel-plugin-transform-es2015-modules-amd'),
     require('babel-plugin-transform-regenerator'),
-    // stage 3
-    require('babel-plugin-transform-exponentiation-operator'),
-    // stage 2
-    require('babel-plugin-syntax-trailing-function-commas'),
-    require('babel-plugin-transform-object-rest-spread'),
-    // stage 1
-    require('babel-plugin-transform-class-properties'),
-    require('babel-plugin-transform-decorators'),
-    require('babel-plugin-transform-export-extensions')
   ]
 }
