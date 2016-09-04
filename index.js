@@ -1,5 +1,5 @@
-module.exports = {
-  plugins: [
+function buildPreset(context, options) {
+  var plugins = [
     // stage 1
     require('babel-plugin-transform-class-properties'),
     require('babel-plugin-transform-decorators'),
@@ -30,7 +30,17 @@ module.exports = {
     require('babel-plugin-transform-es2015-destructuring'),
     require('babel-plugin-transform-es2015-block-scoping'),
     require('babel-plugin-transform-es2015-typeof-symbol'),
-    require('babel-plugin-transform-es2015-modules-amd'),
     require('babel-plugin-transform-regenerator'),
-  ]
+  ];
+
+  if (options && options.amd === false) {
+    plugins.push(require('babel-plugin-transform-es2015-modules-commonjs'));
+  } else {
+    plugins.push(require('babel-plugin-transform-es2015-modules-amd'));
+  }
+
+  return { plugins: plugins };
 }
+
+module.exports = buildPreset({ amd: true });
+module.exports.buildPreset = buildPreset;
