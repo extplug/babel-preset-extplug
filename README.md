@@ -1,5 +1,7 @@
 # babel-preset-extplug
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/extplug/babel-preset-extplug.svg)](https://greenkeeper.io/)
+
 Babel preset for ExtPlug and plugins.
 
 This includes ES2015 and some proposal plugins, targeting AMD or CommonJS
