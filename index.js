@@ -3,10 +3,11 @@ const defaultOptions = {
 };
 
 module.exports = function buildPreset(context, options) {
+  const finalOptions = Object.assign({}, defaultOptions, options);
   return {
     presets: [
       [require('babel-preset-latest'), {
-        es2015: Object.assign({}, defaultOptions, options),
+        es2015: finalOptions,
       }],
     ],
     plugins: [
@@ -14,7 +15,7 @@ module.exports = function buildPreset(context, options) {
       require('babel-plugin-transform-decorators'),
       require('babel-plugin-transform-export-extensions'),
       require('babel-plugin-transform-object-rest-spread'),
-      require('babel-plugin-add-module-exports'),
-    ],
+      finalOptions.modules && require('babel-plugin-add-module-exports'),
+    ].filter(Boolean),
   };
 };
