@@ -1,7 +1,13 @@
+const defaultOptions = {
+  modules: false,
+};
+
 module.exports = function buildPreset(context, options) {
   return {
     presets: [
-      [require('babel-preset-latest'), { es2015: options }],
+      [require('babel-preset-latest'), {
+        es2015: Object.assign({}, defaultOptions, options),
+      }],
     ],
     plugins: [
       require('babel-plugin-transform-class-properties'),
