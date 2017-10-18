@@ -15,10 +15,10 @@
   "homepage": "https://github.com/extplug/babel-preset-extplug#readme",
   "dependencies": {
     "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-plugin-transform-class-properties": "^6.19.0",
-    "babel-plugin-transform-decorators": "^6.13.0",
-    "babel-plugin-transform-export-extensions": "^6.8.0",
-    "babel-plugin-transform-object-rest-spread": "^6.20.2",
-    "babel-preset-latest": "^6.16.0"
+    "babel-plugin-transform-class-properties": "^7.0.0-beta.3",
+    "babel-plugin-transform-decorators": "^7.0.0-beta.3",
+    "babel-plugin-transform-export-extensions": "^7.0.0-alpha.19",
+    "babel-plugin-transform-object-rest-spread": "^7.0.0-beta.3",
+    "babel-preset-env": "^7.0.0-beta.3"
   }
 }
