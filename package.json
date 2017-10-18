@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-extplug",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Babel preset for ExtPlug plugins.",
   "main": "index.js",
   "repository": "extplug/babel-preset-extplug",
