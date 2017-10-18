@@ -16,7 +16,7 @@ module.exports = function buildPreset(context, options) {
       [require('babel-preset-env'), finalOptions]
     ],
     plugins: [
-      require('babel-plugin-transform-class-properties'),
+      [require('babel-plugin-transform-class-properties'), { loose: finalOptions.loose }],
       require('babel-plugin-transform-decorators'),
       require('babel-plugin-transform-export-extensions'),
       require('babel-plugin-transform-object-rest-spread'),
